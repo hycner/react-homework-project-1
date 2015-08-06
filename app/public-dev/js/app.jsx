@@ -3,13 +3,14 @@ import * as React from 'react/addons';
 
 // Modules
 import { Headline } from './app/Headline.jsx';
+import { MyComponent } from './app/MyComponent.jsx';
 
 let styles = {
-    wrap: {
+    outer: {
         textAlign: 'center',
         fontFamily: 'sans-serif'
     },
-    cardWrap: {
+    inner: {
         display: 'flex',
         justifyContent: 'center'
     }
@@ -18,10 +19,10 @@ let styles = {
 class App extends React.Component {
     render() {
         return (
-            <div style={styles.wrap}>
+            <div style={styles.outer}>
                 <Headline>The Button</Headline>
-                <div style={styles.cardWrap}>
-                    button here
+                <div style={styles.inner}>
+                    <MyComponent/>
                 </div>
             </div>
         );
