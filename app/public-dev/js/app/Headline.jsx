@@ -2,7 +2,7 @@
 import * as React from 'react/addons';
 
 let styles = {
-    margin: '30px 0',
+    margin: '0 0 30px 0',
     fontSize: 160,
     fontFamily: 'Lobster',
     color: '#e63931'
