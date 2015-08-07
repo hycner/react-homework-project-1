@@ -5,8 +5,7 @@ COPY . /demo
 
 WORKDIR /demo
 
-RUN apt-get update \
-    && npm i gulp -g \
+RUN npm i gulp -g \
     && npm i \
     && gulp all
 
