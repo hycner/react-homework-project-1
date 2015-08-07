@@ -5,7 +5,7 @@ let styles = {
     margin: '0 0 30px 0',
     fontSize: 160,
     fontFamily: 'Lobster',
-    color: '#e63931'
+    color: '#623108'
 };
 
 export class Headline extends React.Component {

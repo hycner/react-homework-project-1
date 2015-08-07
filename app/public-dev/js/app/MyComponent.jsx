@@ -12,9 +12,14 @@ export class MyComponent extends React.Component {
     render() {
         return (
             <div style={styles}>
-                MyComponent
                 <MyButton/>
+                <span>{this.props.text}</span>
             </div>
         );
     }
 }
+// Displays that text in a span with styling of your choosing.
+
+MyComponent.propTypes = {
+    text: React.PropTypes.string.isRequired
+};
