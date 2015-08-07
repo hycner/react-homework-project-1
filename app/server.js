@@ -4,7 +4,7 @@ const express = require('express'),
     app = express();
 
 // Static middleware serving files from the "public" folder
-app.use(express.static('public'));
+app.use(express.static('app/public'));
 
 const server = app.listen(3001, function() {
     const host = server.address().address;

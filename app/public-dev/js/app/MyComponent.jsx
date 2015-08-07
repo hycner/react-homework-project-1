@@ -54,7 +54,6 @@ export class MyComponent extends React.Component {
         this.setState(newState);
     }
 }
-// Displays that text in a span with styling of your choosing.
 
 MyComponent.propTypes = {
     text: React.PropTypes.string.isRequired
