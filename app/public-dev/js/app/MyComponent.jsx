@@ -9,13 +9,33 @@ let styles = {
 };
 
 export class MyComponent extends React.Component {
+    constructor() {
+        super();
+
+        this.state = {
+            showText: true
+        };
+
+        this._handleButtonClick = this._handleButtonClick.bind(this);
+    }
     render() {
+        let theText = this.state.showText
+            ? <span>{this.props.text}</span>
+            : null;
+
         return (
-            <div style={styles}>
+            <div style={styles} onClick={this._handleButtonClick}>
                 <MyButton/>
-                <span>{this.props.text}</span>
+                {theText}
             </div>
         );
+    }
+    _handleButtonClick() {
+        let newState = this.state;
+
+        newState.showText = !newState.showText;
+
+        this.setState(newState);
     }
 }
 // Displays that text in a span with styling of your choosing.
