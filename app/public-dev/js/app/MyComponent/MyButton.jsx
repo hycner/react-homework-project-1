@@ -1,5 +1,6 @@
 // Libraries
 import * as React from 'react/addons';
+import Radium from 'radium'
 
 let styles = {
     transition: 'all 0.4s',
@@ -10,9 +11,14 @@ let styles = {
     background: 'none',
     padding: '0 25px 0 20px',
     color: '#c52018',
-    fontSize: 22
+    fontSize: 22,
+
+    ':focus': {
+        outline: 0
+    }
 };
 
+@Radium
 export class MyButton extends React.Component {
     constructor() {
         super();

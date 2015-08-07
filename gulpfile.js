@@ -51,7 +51,10 @@ function taskJs() {
                 loaders: [
                     {
                         test: /\.jsx$/,
-                        loader: "babel-loader"
+                        loader: "babel-loader",
+                        query: {
+                            stage: 1
+                        }
                     }
                 ]
             }
