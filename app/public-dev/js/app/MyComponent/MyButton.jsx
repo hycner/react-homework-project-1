@@ -12,6 +12,12 @@ let styles = {
     padding: '0 25px 0 20px',
     color: '#c52018',
     fontSize: 22,
+    cursor: 'pointer',
+
+    ':hover': {
+        background: '#41414a',
+        color: '#e65a41'
+    },
 
     ':focus': {
         outline: 0
