@@ -12,7 +12,8 @@ let styles = {
         flexDirection: 'column'
     },
     text: {
-        marginTop: 15,
+        marginTop: 30,
+        fontSize: 18,
         color: '#623108'
     }
 };
