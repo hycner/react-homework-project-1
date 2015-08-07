@@ -5,7 +5,16 @@ import * as React from 'react/addons';
 import { MyButton } from './MyComponent/MyButton.jsx';
 
 let styles = {
-    color: 'black'
+    outer: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'column'
+    },
+    text: {
+        marginTop: 15,
+        color: '#623108'
+    }
 };
 
 export class MyComponent extends React.Component {
@@ -22,11 +31,17 @@ export class MyComponent extends React.Component {
         let theText = this.state.showText
             ? <span>{this.props.text}</span>
             : null;
+        let btnText = this.state.showText
+            ? 'Hide Text'
+            : 'Show Text';
 
         return (
-            <div style={styles} onClick={this._handleButtonClick}>
-                <MyButton/>
-                {theText}
+            <div style={styles.outer}>
+                <MyButton clickHandler={this._handleButtonClick}
+                          showText={this.state.showText}>
+                    {btnText}
+                </MyButton>
+                <span style={styles.text}>{theText}</span>
             </div>
         );
     }
