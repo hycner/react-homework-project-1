@@ -38,8 +38,7 @@ export class MyComponent extends React.Component {
 
         return (
             <div style={styles.outer}>
-                <MyButton clickHandler={this._handleButtonClick}
-                          showText={this.state.showText}>
+                <MyButton clickHandler={this._handleButtonClick}>
                     {btnText}
                 </MyButton>
                 <span style={styles.text}>{theText}</span>
